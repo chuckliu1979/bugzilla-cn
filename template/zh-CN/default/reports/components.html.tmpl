@@ -29,14 +29,14 @@
 <h1>[% product.name FILTER html %]</h1>
 
 <div id="product_desc">[% product.description FILTER html_light %]</div>
-<p>选择一项子产品来检视该子产品中尚未关闭的 [% terms.bugs %] 。</p>
+<p>选择一项子产品来检查该子产品中尚未关闭的 [% terms.bugs %] 。</p>
 
 <table id="component_table">
   <tr>
     <th>子产品</th>
     <th>默认负责人</th>
     [% IF Param("useqacontact") %]
-      <th>默认 QA 连络人</th>
+      <th>默认 QA 联系人</th>
     [% END %]
   </tr>
 

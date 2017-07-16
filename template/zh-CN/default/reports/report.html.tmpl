@@ -132,7 +132,7 @@
              [%~ issue_hash_token(['delete_report', saved_report_id]) FILTER uri %]">Forget this report</a>
   [% ELSE %]
     <form method="get" action="report.cgi" class="inline">
-      <input type="submit" id="remember" value="储存此份报告">，名称：
+      <input type="submit" id="remember" value="保存此份报告">，名称：
       <input type="hidden" name="query" value="[% switchbase %]&amp;format=[% format FILTER uri %]&amp;action=wrap">
       <input type="hidden" name="action" value="add">
       <input type="hidden" name="token" value="[% issue_hash_token(['save_report']) FILTER html %]">

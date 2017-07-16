@@ -166,7 +166,7 @@
   [% END %]
   [% PROCESS display_buglist %]
   <br><br>
-  <a href="request.cgi?[% urlquerypart FILTER html %]&amp;ctype=csv">以 CSV 清单方式检视</a>
+  <a href="request.cgi?[% urlquerypart FILTER html %]&amp;ctype=csv">以 CSV 清单方式检查</a>
 [% END %]
 
 [% PROCESS global/footer.html.tmpl %]
@@ -225,5 +225,5 @@
   [% NEXT UNLESS buglist.keys.size %]
   <a href="buglist.cgi?bug_id=
           [%- buglist.keys.nsort.join(",") FILTER html %]">以
-  [%+ terms.bug %] 清单方式检视</a>
+  [%+ terms.bug %] 清单方式检查</a>
 [% END %]

@@ -445,7 +445,7 @@ TUI_hide_default('attachment_text_field');
               { key: "update_token", label: '',
                 formatter: YAHOO.bugzilla.dupTable.formatCcButton }
           ];
-          YAHOO.bugzilla.dupTable.addCcMessage = "将我加入寄件副本清单中";
+          YAHOO.bugzilla.dupTable.addCcMessage = "将我加入邮件副本清单中";
           YAHOO.bugzilla.dupTable.init({
             container: 'possible_duplicates',
             columns: dt_columns,
@@ -495,7 +495,7 @@ TUI_hide_default('attachment_text_field');
           [% ' checked="checked"' IF comment_is_private %]
                onClick="updateCommentTagControl(this, 'comment')">
         <label for="comment_is_private">
-          将描述和新附加的附件设定为不公开（仅
+          将描述和新附加的附件设置为不公开（仅
           <strong>[% Param('insidergroup') FILTER html %]</strong>
           群组成员可见）
         </label>
@@ -588,7 +588,7 @@ TUI_hide_default('attachment_text_field');
           [% ELSE %]
             所有已选择的群组
           [% END %]
-          的使用者才能浏览这个
+          的用户才能浏览这个
           [+% terms.bug %] ：
         </strong>
       <br>
@@ -620,7 +620,7 @@ TUI_hide_default('attachment_text_field');
   <tr>
     <th>&nbsp;</th>
     <td colspan="3">
-      <input type="submit" id="commit" value="送出 [% terms.Bug %]">
+      <input type="submit" id="commit" value="提交 [% terms.Bug %]">
       &nbsp;&nbsp;&nbsp;&nbsp;
       <input type="submit" name="maketemplate" id="maketemplate"
              value="将所有的值保存为书签模版"

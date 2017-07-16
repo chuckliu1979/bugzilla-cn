@@ -19,34 +19,34 @@
   #         sort:  integer that sets execution order on named queries
   #%]
 
-[% title = "设定订阅" %]
+[% title = "设置订阅" %]
 [% PROCESS global/header.html.tmpl
   title = title
   doc_section = "using/index.html"
 %]
 
 <p>
-  「订阅」这项功能，是 Bugzilla 在一个固定的期间执行一项已储存的搜索，并将搜索结果所列出的 [% terms.bugs %] 以电子邮件发送。
+  「订阅」这项功能，是 Bugzilla 在一个固定的期间执行一项已保存的搜索，并将搜索结果所列出的 [% terms.bugs %] 以电子邮件发送。
 </p>
 
 <p>
-  要设定一个新的订阅事件，点选「新增事件」。
+  要设定一个新的订阅事件，点击「新增事件」。
   <br>只要输入邮件主旨以及描述文字，就会和[% terms.bug %]清单一起发出。
 </p>
 
 <p>
-  要替事件设定排程，点选「新增排程」。
+  要替事件设置排程，点选「新增排程」。
   <br>排程的内容包括一天、一天中的某个时间，或是一个时间的间隔（例如每15分钟），以及电子邮件地址。
   <br>电子邮件地址将会根据你的权限来决定是否可以变动。
-  <br>一个事件可以设定多组排程，以便对不同的使用者执行多次。
+  <br>一个事件可以设置多组排程，以便对不同的用户执行多次。
 </p>
 
 <p>
-  搜索来自已储存的搜索。<br>
-  已储存的搜索是在执行<a href="query.cgi">搜索</a>页面，并将该页面结果以指定的名称储存于 Bugzilla 中。<br>
-  点选「新增搜索」，选择已储存的搜索名称，并于 [% terms.bug %] 表格中加入标题。<br>
-  「排序」下的数字为选填。若有多笔搜索排列，将会以该数字决定执行的顺序（从最小到最大）。<br>
-  如果勾选「每个 [% terms.bug %] 送出一封邮件」，那么符合该搜索的每个 [% terms.bug%] 都会发出一封邮件。
+  搜索来自已保存的搜索。<br>
+  已保存的搜索是在执行<a href="query.cgi">搜索</a>页面，并将该页面结果以指定的名称保存于 Bugzilla 中。<br>
+  点击「新增搜索」，选择已保存的搜索名称，并于 [% terms.bug %] 表格中加入标题。<br>
+  「排序」下的数字为选填。若有多个搜索排列，将会以该数字决定执行的顺序（从最小到最大）。<br>
+  如果勾选「每个 [% terms.bug %] 发出一封邮件」，那么符合该搜索的每个 [% terms.bug%] 都会发出一封邮件。
 </p>
 
 <p>
@@ -56,7 +56,7 @@
 <form method="post" action="editwhines.cgi">
 [%# This hidden submit button must be here to set default behavior when
     the user presses return on a form input field #%]
-<input type="submit" value="更新／送出" id="commit" name="commit"
+<input type="submit" value="更新／发送" id="commit" name="commit"
        class="bz_default_hidden">
 <input type="hidden" name="update" value="1">
 <input type="hidden" name="token" value="[% token FILTER html %]">
@@ -83,7 +83,7 @@
   </tr>
 
   <tr>
-    <th>在订阅讯息中的描述文字：</th>
+    <th>在订阅信息中的描述文字：</th>
     <td colspan="2">
       [% INCLUDE global/textarea.html.tmpl
          name           = "event_${event.key}_body"
@@ -97,7 +97,7 @@
   </tr>
 
   <tr>
-    <th>即使搜索结果没有任何 [% terms.bugs %] ，仍然发出讯息：</th>
+    <th>即使搜索结果没有任何 [% terms.bugs %] ，仍然发出信息：</th>
     <td colspan="2">
       <input type="checkbox" name="event_[% event.key %]_mailifnobugs"
         [%- IF event.value.mailifnobugs == 1 %] checked [% END %]>
@@ -153,7 +153,7 @@
                   <select name="mailto_type_[% schedule.id %]">
                     <option value="0" [% IF schedule.mailto_type == 0 %]
                                         selected
-                                      [% END %]>使用者</option>
+                                      [% END %]>用户</option>
                     <option value="1" [% IF schedule.mailto_type == 1 %]
                                         selected
                                       [% END %]>群组</option>
@@ -198,7 +198,7 @@
                id="add_query_[% event.key %]">
       </td>
       <td class="right" valign="bottom">
-        <input type="submit" value="更新／发出" name="commit" id="update">
+        <input type="submit" value="更新／发送" name="commit" id="update">
       </td>
     </tr>
 
@@ -261,7 +261,7 @@
                      id="add_query_[% event.key %]">
             </td>
             <td colspan="2" class="right">
-              <input type="submit" value="更新／发出" name="commit" id="update">
+              <input type="submit" value="更新／发送" name="commit" id="update">
             </td>
           </tr>
         </table>
@@ -296,7 +296,7 @@
     </select>
 
   [% ELSE %]
-    请浏览<a href="query.cgi">搜索</a>页面并储存搜索结果
+    请浏览<a href="query.cgi">搜索</a>页面并保存搜索结果
   [% END %]
 
 [%+ END %]
