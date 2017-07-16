@@ -5,7 +5,7 @@
 ## Bugzilla simplified Chinese (zh-CN) language pack files
 
 ### Download
-Download is powered by github [releases](https://github.com/repeat/bugzilla-tw/releases) page. The version tag is same as which Bugzilla uses.
+Download is powered by github [releases](https://github.com/chuckliu1979/bugzilla-cn/releases) page. The version tag is same as which Bugzilla uses.
 
 ### Install
 
