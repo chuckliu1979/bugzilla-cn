@@ -101,14 +101,14 @@
     <ul>
       [% IF user.id %]
         <li>
-          [% title = BLOCK %]Open [% terms.bugs %] assigned to me[% END %]
+          [% title = BLOCK %]我负责的 [% terms.bugs %] [% END %]
           <a href="buglist.cgi?f1=assigned_to&amp;o1=equals&amp;v1=%25user%25&amp;resolution=---">
             [% title FILTER html %]</a> ([% assignee_count FILTER html %])
           <a href="buglist.cgi?f1=assigned_to&amp;o1=equals&amp;v1=%25user%25&amp;resolution=---&amp;ctype=atom&amp;title=[% title FILTER uri %]"
              class="rss">&nbsp;</a>
         </li>
         <li>
-          [% title = BLOCK %]Open [% terms.bugs %] reported by me[% END %]
+          [% title = BLOCK %]我报告的 [% terms.bugs %] [% END %]
           <a href="buglist.cgi?f1=reporter&amp;o1=equals&amp;v1=%25user%25&amp;resolution=---">
             [% title FILTER html %]</a> ([% reporter_count FILTER html %])
           <a href="buglist.cgi?f1=reporter&amp;o1=equals&amp;v1=%25user%25&amp;resolution=---&amp;ctype=atom&amp;title=[% title FILTER uri %]"
